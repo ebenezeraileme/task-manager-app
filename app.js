@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 const task = require('./Route/Task')
+app.use(express.json)
 
 
 const mongoose = require('mongoose')
@@ -26,10 +27,9 @@ mongoose.connect(db, {dbName: 'task-manager-app'})
 
 app.use('/api/v1/tasks', task)
 
-
 app.use(express.static('./public'))
 app.use(express.urlencoded({extended: false}))
 
-app.listen(8000, ()=>{
-    console.log('port is listening @ 8000')
+app.listen(4000, ()=>{
+    console.log('port is listening @ 4000')
 })  
