@@ -30,6 +30,6 @@ app.use('/api/v1/tasks', task)
 app.use(express.static('./public'))
 app.use(express.urlencoded({extended: false}))
 
-app.listen(4000, ()=>{
-    console.log('port is listening @ 4000')
+app.listen(5000, ()=>{
+    console.log('port is listening @ 5000')
 })  
